@@ -1,0 +1,15 @@
+def isAnagram(s1, s2):
+	x = (str(s1).lower())
+	y = (str(s2).lower())
+	alphabet = 'abcdefghijklmnopqrstuvwxyz'
+	s = 0
+	if len(x) != len(y):
+		return False
+	while x.count(alphabet[s]) == y.count(alphabet[s]):
+		s += 1
+		if s >24:
+			break
+	if x.count(alphabet[s]) != y.count(alphabet[s]):
+		return False
+	else:
+		return True
